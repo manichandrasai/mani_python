@@ -1,0 +1,6 @@
+p = int(input("enter a p:"))
+r = int(input("enter a r:"))
+t = int(input("enter a t:"))
+n = int(input("enter a n:"))
+ci = p*(1+r/100)**(n*t)
+print(ci)
