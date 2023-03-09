@@ -1,2 +1,2 @@
 # mani_python
-this is mani's python practice file
+this is mani's python practice files
