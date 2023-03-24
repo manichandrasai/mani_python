@@ -1,3 +1,7 @@
+# f = open("data.csv","r")
+# s = f.read()
+# f.close()
+# print(s)
 import csv
 
 with open('data.csv', newline='\n') as csvfile:
