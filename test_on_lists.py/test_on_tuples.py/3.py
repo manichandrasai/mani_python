@@ -5,7 +5,7 @@ students = [
 	("SaiTeja", ["English", "Accounting", "Economics", "Law"]), 
 	("Sravani", ["Sociology", "Economics", "Law", "Stats", "Music"])
 	]
-v = 1
+v = 0
 for name, sub in students:
     if "Computers" in sub:
         v += 1

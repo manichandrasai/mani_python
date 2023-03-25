@@ -61,4 +61,4 @@ for i in csv_data:
     else:
         country_population[i[5]] += 1
 country = max(country_population, key = lambda x : country_population[x])
-print(country,country_population[country])
+print(country , country_population[country])

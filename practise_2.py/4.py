@@ -9,3 +9,4 @@ m = []
 for i in a:
     m.append((i,len(i)))
 print(m)    
+
