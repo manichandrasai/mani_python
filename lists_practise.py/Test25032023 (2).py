@@ -220,3 +220,4 @@ In the output, keys are word lengths and values are their count.
 """
 
 # write your solution here for the above problem
+dict = { 'A fat cat is on the mat'}
