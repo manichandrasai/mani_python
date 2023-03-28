@@ -220,4 +220,13 @@ In the output, keys are word lengths and values are their count.
 """
 
 # write your solution here for the above problem
-dict = { 'A fat cat is on the mat'}
+from collections import Counter
+res = {}
+sen  =  'A fat cat is on the mat'
+data = sen.split()
+for x in data:
+   res[x] = len(x)
+# print(res)   
+res =res.values()
+c = dict(Counter(res))
+print(c)
