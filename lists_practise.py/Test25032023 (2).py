@@ -147,16 +147,12 @@ m = []
 for i in l:
    if(i[1] == 'Rome'):
       c += 1
-      m.append(i)
-s = []
-for i in m:
-   if (i[2] > 0):
-      s.append(i[2])
+      m.append(i[2])
 sum = 0
-for i in s:
+for i in m:
    sum += i
 # print(sum)
-average = sum//2
+average = sum//len(m)
 # print(average)
 
 print(f"the no of connections to rome is {c}, the average flight time to rome is {average}  min")   
