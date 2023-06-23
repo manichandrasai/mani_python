@@ -1,0 +1,209 @@
+# Print the first 'n' natural number and their sum.
+n = int(input("Enter a value: "))
+total = 0
+for i in range(1, n+1):
+    print(i)
+    total += i 
+print(f"Sum of first {n} natural numbers: {total}" )
+
+# ------Practice Exercise---------
+# Write a program that prompt the user for their name and how many times to print it. The program should print out the user’s name the specified number of times.
+name = input("enter your name:")
+count = int(input("enter how many times you want:"))
+for i in range(count):
+    print(name)
+
+# Write a program that prompt the user for a string and prints out all the location(index) of each 'a' in the string. If 'a' doesn't exist, print "None".
+string = input("Enter a string: ")
+indices = []
+for index, char in enumerate(string):
+    if char == 'a':
+        indices.append(index)
+if indices:
+    for index in indices:
+        print(index)
+else:
+    print("None")
+
+# Write a program that prompt the user for their name and prints it in the funny pattern as given in the example below.
+# Sample Input
+#  Python
+# Expected Output
+#  P Py Pyt Pyth Pytho Python
+name = input("Enter your name: ")
+pattern = ''
+for i in range(len(name)):
+    pattern += name[:i+1] + ' '
+print(pattern.strip())
+
+# Write a program that prompt the user to enter a word and then capitalizes every other letter of that word.
+# # Sample Input
+#  rhinoceros
+# # Expected Output
+#  rHiNoCeRoS
+word = input("Enter a word: ")
+result = ''
+for i in range(len(word)):
+    if i % 2 == 1:
+        result += word[i].upper()
+    else:
+        result += word[i]
+print(result)
+# Write a program that prints out all the integers from 1 to 20 and their squares.
+# # Expected Output
+#  1 --- 1
+#  2 --- 4
+#  3 --- 9
+#  ...
+#  ...
+#  20 --- 400
+for num in range(1, 21):
+    square = num ** 2
+    print(f"{num} --- {square}")
+# Write a program to read a line of text as input from the user and print the count of space characters(' ') in the text entered.
+# # Sample Input
+#  Python is the most powerful language you can still read.
+# # Expected Output
+# #  9
+text = input("Enter a line of text: ")
+count = 0
+for char in text:
+    if char == ' ':
+        count += 1
+print(count)
+# Write a program that uses a 'for' loop to print the numbers 8, 11, 14, 17, 20, . . . , 83, 86, 89.
+for num in range(8, 90, 3):
+    print(num)
+
+# Write a program that uses a 'for' loop to print the numbers 100, 98, 96, . . . , 4, 2.
+for num in range(100, 1, -2):
+    print(num)
+
+# Write a program that uses a 'for' loop to print numbers from 10 to 1 in descending order.
+for num in range(10, 0, -1):
+    print(num)
+
+# Write a program that counts how many of the squares of the numbers from 1 to 1000 end in a 1.
+count = 0
+for num in range(1, 1001):
+    square = num ** 2
+    last_digit = square % 10
+
+    if last_digit == 1:
+        count += 1
+print(count)
+
+# Write a program that counts how many of the squares of the numbers from 1 to 1000 end in a 4 and how many end in a 9.
+count_4 = 0
+count_9 = 0
+for num in range(1, 1001):
+    square = num ** 2
+    last_digit = square % 10
+    if last_digit == 4:
+        count_4 += 1
+    elif last_digit == 9:
+        count_9 += 1
+print("Count of squares ending in 4:", count_4)
+print("Count of squares ending in 9:", count_9)
+
+# Write a program to find all numbers between 1 and 1000 that are divisible by 7 and end in a 6.
+for num in range(1, 1001):
+    if num % 7 == 0 and num % 10 == 6:
+        print(num)
+
+# Write a program to determine how many of the numbers between 1 and 10000 contain the digit 3.
+count = 0
+for num in range(1, 10001):
+    if '3' in str(num):
+        count += 1
+print("Count of numbers containing the digit 3:", count)
+
+# Write a program that creates the list [1,11,111,1111,...,111...1] , where the entries have an ever increasing number of ones, with the last entry having 100 ones.
+ones_list = []
+
+for i in range(1, 101):
+    ones = int('1' * i)
+    ones_list.append(ones)
+
+print(ones_list)
+
+# Write a program to display the stars in an equilateral triangular form using a single for loop.
+rows = 5
+
+for i in range(rows):
+    print(' ' * (rows - i - 1) + '*' * (2 * i + 1))
+
+# A jar of Halloween candy contains an unknown amount of candy and if you can guess exactly how much candy is in the bowl, then you win all the candy. You ask the person in charge the following: If the candy is divided evenly among 5 people, how many pieces would be left over? The answer is 2 pieces. You then ask about dividing the candy evenly among 6 people, and the amount left over is 3 pieces. Finally, you ask about dividing the candy evenly among 7 people, and the amount left over is 2 pieces. By looking at the bowl, you can tell that there are less than 200 pieces. Write a program to determine how many pieces are in the bowl.
+
+for num_pieces in range(1, 200):
+    if num_pieces % 5 == 2 and num_pieces % 6 == 3 and num_pieces % 7 == 2:
+        print("The number of candy pieces in the bowl:", num_pieces)
+        break
+
+# ----break------
+#  Print the first three digit multiple of a given number.
+num = int(input("Enter a number: "))
+multiple = 0
+for i in range(100, 1000):
+    if i % num == 0:
+        multiple = i
+        break
+print("The first three-digit multiple of", num, "is:", multiple)
+
+# Check whether the number is prime or not
+n = int(input("Enter Value: "))
+rt = int(n**0.5)
+
+for i in range(2, rt+1):
+    if n%i == 0:
+        print ("Not Prime")
+        break
+else:
+    print ("Prime")
+
+# -------continue---------
+# Print the sum all non-multiples of 3 below 50.
+s = 0
+for x in range(1, 51):
+    if x % 3 == 0:
+        continue
+    s += x
+print ("Sum of all non-multiples of 3 below 50: ", s)
+
+
+#--------- Practice Exercise---------------
+# Using break statement, write a 'while' loop that prints integers from zero to 15.
+num = 0
+while True:
+    print(num)
+    num += 1
+    if num > 15:
+        break
+
+# Using continue statement, write a 'while' loop that processes only even integers from 0 to 10.
+num = 0
+while num <= 10:
+    if num % 2 != 0:
+        num += 1
+        continue
+
+    print(num)
+    num += 1
+
+numbers = [1, 2, 3, 4, 0, 5, 6, 7, 8, 9]
+sum = 0
+for num in numbers:
+    if num == 0:
+        break
+
+    sum += num
+print("Sum:", sum)
+
+# Using continue statement, write a 'for' loop that takes a list of integers and triples each integer that is even.
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for num in numbers:
+    if num % 2 != 0:
+        continue
+
+    tripled = num * 3
+    print(tripled)
